@@ -71,11 +71,6 @@ class Controller extends BaseController
         $avgAge = EmployeeRecord::selectRaw('AVG(TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE())) as avg_age')->value('avg_age');
         $totalSalaries = EmployeeRecord::sum('salary');
 
-        $totalEmployees = EmployeeRecord::count();
-        $averageSalary = EmployeeRecord::avg('salary');
-        $oldestEmployee = EmployeeRecord::orderBy('date_of_birth')->first();
-        $youngestEmployee = EmployeeRecord::orderBy('date_of_birth', 'desc')->first();
-
         return view('dashboard', compact('totalMaleEmployees', 'totalFemaleEmployees', 'avgAge', 'totalSalaries'));
     }
 
