@@ -7,6 +7,41 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+To run mini-project,
+
+**Requirments**
+- PHP
+- Composer
+- Mysql
+
+Then, clone repository
+```
+git clone https://github.com/Allen1801/mini-project.git
+cd mini-project
+```
+
+You'll need to setup your database credentials in your .env, if you dont know how you can create you .env file and copy this code
+```
+DB_CONNECTION=
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
+
+Add your database configuration there and then type this in you terminal
+```
+npm install
+npm run dev
+```
+
+In another command prompt enter this command.
+```
+php artisan migrate
+php artisan serve
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
